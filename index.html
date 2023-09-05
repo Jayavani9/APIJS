@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch JSON from API</title>
+</head>
+<body>
+    <script>
+        const url = 'https://api.wheretheiss.at/v1/satellites/25544';
+        async function getData(){
+            const resp = await fetch(url);
+            const data = await resp.json();
+            console.log(data);
+        }
+
+        getData();
+
+    </script>
+    
+</body>
+</html>
